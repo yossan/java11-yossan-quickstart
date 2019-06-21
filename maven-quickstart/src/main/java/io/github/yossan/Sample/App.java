@@ -1,4 +1,4 @@
-package io.github.yossan.Sample;
+package ${package};
 
 /**
  * Hello world!
