@@ -1,4 +1,4 @@
-package ${package};
+package Sample;
 
 /**
  * Hello world!
