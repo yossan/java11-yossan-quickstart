@@ -4,7 +4,7 @@
 
 ```
 $ git clone https://github.com/yossan/maven-quickstart-archetype.git
-$ cd maven-quickstart-archetype/maven-quickstart-archetype
+$ cd maven-quickstart-archetype/maven-quickstart
 $ mvn archetype:create-from-project
 ```
 
