@@ -8,21 +8,43 @@ $ cd maven-quickstart-archetype/maven-quickstart-archetype
 $ mvn archetype:create-from-project
 ```
 
+And an Archetype is generated in the following directory.
+`target/generated-sources/archetype/`
+
+
 ## 2. Fix package name in App.java
 
-target/generated-sources/archetype/target/classes/archetype-resources/src/main/java/App.java
 
-Replace
-
-```
-package Sample;
-```
-
-with
+We need to fix the `package name` contained in the source files to specify the package name when creating a maven project. 
+The source files is generated at the following directory.
 
 ```
-package ${pacage};
+target/generated-sources/archetype/target/classes/archetype-resources/src/main/java/*.java
 ```
+
+Replace `package Sample;` with `package ${pacage};`. 
+This looks like this.
+
+```App.java
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package $package
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+
+```
+
 
 # 3. Install to the local repository
 
